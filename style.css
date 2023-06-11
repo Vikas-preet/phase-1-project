@@ -1,0 +1,23 @@
+body {
+  background-color: floralwhite;
+}
+header {
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  color: rgb(198, 55, 55);
+  background-color: rgb(74, 171, 169);
+}
+#images {
+  text-align: center;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+}
