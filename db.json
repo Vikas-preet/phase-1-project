@@ -1,0 +1,46 @@
+{
+  "cakes": [
+    {
+      "id": 1,
+      "name": "Birthday Cake",
+      "image": "https://i.etsystatic.com/16660589/r/il/53a6ca/3867262205/il_1588xN.3867262205_hw1f.jpg",
+      "rating": 7,
+      "comment": "It makes your birthday more sweeter"
+    },
+    {
+      "id": 2,
+      "name": "Anniversary cake",
+      "image": "https://cdn.shopify.com/s/files/1/0273/9224/5898/products/41Mj73L4SQL_1024x1024.jpg?v=1612365240",
+      "rating": 9,
+      "comment": "It is beautiful and delicious"
+    },
+    {
+      "id": 3,
+      "name": "Chocolate cake",
+      "image": "https://i.etsystatic.com/42680606/r/il/33516d/4834047484/il_1588xN.4834047484_qs13.jpg",
+      "rating": "8",
+      "comment": "Delicious chocolatey cake decorated cake slice design"
+    },
+    {
+      "id": 4,
+      "name": "Red Velvet cake",
+      "image": "https://i.etsystatic.com/43259980/r/il/368b13/4903181042/il_1588xN.4903181042_8a55.jpg",
+      "rating": 8,
+      "comment": "Absolutely Amazing"
+    },
+    {
+      "id": 5,
+      "name": "Sponge cake",
+      "image": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001468_10-8902394.jpg?quality=90&resize=500,454",
+      "rating": 6,
+      "comment": "Amazingly fluffy & light genoise sponge cake recipe for any type of dessert"
+    },
+    {
+      "id": 6,
+      "name": "Cupcakes",
+      "image": "https://www.bhg.com/thmb/iL-5Q6gGjmXkxCKqEovughTLQAo=/3000x0/filters:no_upscale():strip_icc()/how-to-bake-how-to-make-cupcakes-hero-01-12c03f3eff374d569b0565bff7d9e597.jpg",
+      "rating": 6,
+      "comment": "Perfect for any occassion"
+    }
+  ]
+}
