@@ -21,3 +21,15 @@ footer {
   text-align: center;
   margin-top: auto;
 }
+
+.card {
+  max-width: 30;
+  border: solid 1px;
+  margin: 20px;
+  padding: 10px;
+  background-color: antiquewhite;
+}
+
+.card img {
+  width: 100%;
+}
