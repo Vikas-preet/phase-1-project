@@ -5,7 +5,7 @@ const cakesContainer = document.querySelector(".display-container")
 
 //Event listeners
 // First event listener to select the option from drop down for cake choice
-cakesSelect.addEventListener("change", displayCake)
+cakesSelect.addEventListener("change", fetchCake)
 
 //Functions
 // getCakes will get all the cake option from json server
@@ -26,32 +26,36 @@ function getCakes() {
 function renderCakeOptions(cakes) {
   cakes.forEach((cake) => {
     const option = document.createElement("option")
-    option.value = cake.name
+    option.value = cake.id
     option.textContent = cake.name
+
     cakesSelect.append(option)
   })
 }
 
-function displayCake(e) {
-  const value = e.target.value
-  fetch`http://localhost:3000/cakes/{value}`
+function fetchCake(e) {
+  const cakeInput = e.target.value
+  console.log(cakeInput)
+  fetch(`http://localhost:3000/cakes/${cakeInput}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data)
+      displayCake(data)
     })
+}
 
+function displayCake(data) {
   //create cardDiv and added class to it to hold the cake option
   //replacechildren funtion will clear the previous options
   cakesContainer.replaceChildren()
   const cardDiv = document.createElement("div")
-  //class card will create border for the display option
+  // //class card will create border for the display option
   cardDiv.classList.add("card")
 
   const image = document.createElement("img")
-  image.src = value.image
+  image.src = data.image
 
   const title = document.createElement("h3")
-  title.textContent = value.name
+  title.textContent = data.name
 
   cardDiv.append(image, title)
   cakesContainer.append(cardDiv)
