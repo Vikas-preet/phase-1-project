@@ -9,7 +9,10 @@
     <script defer src="main.js"></script>
   </head>
   <body>
+    <!--header section-->
     <header><h3>Amanda Vegan Bakeshop</h3></header>
+
+    <!--insert rotating image gallery-->
     <section id="images">
       <img src="images/cinderalla.jpeg" height="200" width="250" />
       <img
@@ -19,7 +22,8 @@
       />
     </section>
     <section>Lets celebrate together! Please select your choice</section>
-    <!--search section--><span>
+
+    <!--search dropdown section--><span>
       <select name="cakes" id="cakes">
         <option value="">Select</option>
       </select></span
@@ -27,11 +31,25 @@
     <!--end of search section-->
 
     <!--Display selection for cakes-->
-    <section class="display option">
-      <h1 class="display heading">
-        <div class="display-container"></div>
-      </h1>
+    <div class="display option">
+      
+        <img
+          class="detail-image"
+          src="./images/image-placeholder.jpg"
+          alt="Insert image Here"
+        />
+        <h2 class="display-heading">
+          cake name</h2>
+        </div>
+
+      <h3>Rating:</h3>
+      <p><span id="display-rating">Display rating here</span> /10</p>
+
+      <h3>Comment:</h3>
+      <p id="display-comment">Show comment here</p>
     </section>
+
+    <!--footer section-->
     <footer>back to top</footer>
   </body>
 </html>
