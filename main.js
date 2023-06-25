@@ -78,5 +78,23 @@ newCakeOption.addEventListener("submit", (event) => {
     rating: newRating,
     comment: newComment,
   }
-  displayCake(newCake)
+  postCakeData(newCake)
+})
+
+//post request function to add new cake
+const postCakeData = (newCake) => {
+  const config = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newCake),
+  }
+  return fetch("http://localhost:3000/cakes", config).then((data) =>
+    data.json()
+  )
+}
+
+newCakeOption.addEventListener("click", (e) => {
+  return "Thanks for your valuable suggestion."
 })
