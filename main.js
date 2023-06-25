@@ -90,11 +90,8 @@ const postCakeData = (newCake) => {
     },
     body: JSON.stringify(newCake),
   }
-  return fetch("http://localhost:3000/cakes", config).then((data) =>
-    data.json()
-  )
+  // return fetch("http://localhost:3000/cakes", config).then((data) =>
+  //   data.json()
+  // )
+  alert("Thanks for your valuable suggestion.")
 }
-
-newCakeOption.addEventListener("click", (e) => {
-  return "Thanks for your valuable suggestion."
-})
