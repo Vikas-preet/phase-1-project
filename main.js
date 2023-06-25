@@ -63,3 +63,20 @@ function displayCake(data) {
 }
 
 ///////////////////////////////////////////////////////////////////////////
+// New form to get the customer's suggestion
+const newCakeOption = document.getElementById("new-cake-choice")
+newCakeOption.addEventListener("submit", (event) => {
+  event.preventDefault()
+  const newName = document.getElementById("new-name").value
+  const newImage = document.getElementById("new-image").value
+  const newRating = document.getElementById("new-rating").value
+  const newComment = document.getElementById("new-comment").value
+
+  const newCake = {
+    name: newName,
+    image: newImage,
+    rating: newRating,
+    comment: newComment,
+  }
+  displayCake(newCake)
+})
