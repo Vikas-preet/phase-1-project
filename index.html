@@ -6,30 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phase-1 Project</title>
     <link rel="stylesheet" href="style.css" />
+
+    <!---link to add swiper fron cdn------->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!------------------------------------->
     <script defer src="main.js"></script>
   </head>
   <body>
     <!--header section-->
-    <header><h3>Amanda Vegan Bakeshop</h3></header>
-
+    <header><h2>Amanda Vegan Bakeshop</h2></header>
+    <!---------------------------------------------------------------------------->
     <!--insert rotating image gallery-->
-    <section id="images">
-      <img src="images/cinderalla.jpeg" height="200" width="250" />
-      <img
-        src="images/chocolate-cupcakes-FT-RECIPE1221-e7e99dee29ad4a9db7a169d7c41f4f79.jpg"
-        height="200"
-        width="200"
-      />
-    </section>
-    <section>Lets celebrate together! Please select your choice</section>
+    <div class="container">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="slider-images/IMG-1.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_2.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_3.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_4.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_5.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_6.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_7.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_8.jpeg" /></div>
+          <div class="swiper-slide"><img src="slider-images/IMG_9.jpeg" /></div>
+          <div class="swiper-slide">
+            <img src="slider-images/IMG_10.jpeg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="slider-images/IMG_11.jpeg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="slider-images/IMG_12.jpeg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="slider-images/IMG_13.jpeg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="slider-images/IMG_14.jpeg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="slider-images/IMG_15.jpeg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="slider-images/IMG_16.jpeg" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-    <!--search dropdown section--><span>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+
+    <!---------------------------------------------------------------------------->
+    <!--search dropdown section-->
+    <h3>Lets celebrate together! Please select your choice</h3>
+    <span>
       <select name="cakes" id="cakes">
         <option value="">Select</option>
       </select></span
     >
     <!--end of search section-->
+    <!---------------------------------------------------------------------------->
 
+    <!---------------------------------------------------------------------------->
     <!--Display selection for cakes-->
     <div class="display option">
       <img
@@ -45,10 +92,16 @@
 
     <h3>Comment:</h3>
     <p id="display-comment">Show comment here</p>
+    <!---------------------------------------------------------------------------->
 
+    <!---------------------------------------------------------------------------->
     <!--Get customer's suggestion-->
     <br />
-    <p>Please give your suggetion for new cake options in our menu</p>
+    <h3>Your Feedback</h3>
+    <p>
+      Please give your suggetion for new cake options that you want us to add in
+      our menu. We will love to hear from you!
+    </p>
     <form id="new-cake-choice">
       <h4>Add New cake</h4>
       <label for="name">Name: </label>
@@ -61,8 +114,34 @@
       <textarea name="new-comment" id="new-comment"></textarea>
       <input type="submit" value="submit" />
     </form>
+    <!---------------------------------------------------------------------------->
 
     <!--footer section-->
     <footer>back to top</footer>
+    <!---script to add swiper fron cdn------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      })
+    </script>
+    <!------------------------------------>
   </body>
 </html>
