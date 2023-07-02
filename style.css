@@ -55,6 +55,8 @@ footer {
   height: 50vh;
 }
 .swiper-slide img {
+  border: 2px solid rgb(18, 190, 87);
+
   width: 100%;
   height: 100%;
 }
@@ -95,7 +97,7 @@ footer {
 
 .flex-child-2 {
   border: 2px solid rgb(18, 190, 87);
-  margin-left: 80px;
+  margin-left: 50px;
   margin-right: 20px;
-  width: 50%;
+  width: fit-content;
 }
