@@ -36,6 +36,7 @@ footer {
 .detail-image {
   height: 350px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +56,7 @@ footer {
 }
 .swiper-slide img {
   width: 100%;
-  height: 95%;
+  height: 100%;
 }
 .swiper .swiper-button-prev,
 .swiper .swiper-button-next {
@@ -63,4 +64,38 @@ footer {
 }
 .swiper .swiper-pagination-bullet-active {
   background: #222;
+}
+
+.display-section {
+  display: flexbox;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+.feedback-section {
+  display: flexbox;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  width: 200px;
+  inline-size: 200px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child-1 {
+  flex: 1;
+  border: 2px solid rgb(18, 190, 87);
+  margin-left: 20px;
+  margin-right: 20px;
+  width: fit-content;
+}
+
+.flex-child-2 {
+  border: 2px solid rgb(18, 190, 87);
+  margin-left: 80px;
+  margin-right: 20px;
+  width: 50%;
 }

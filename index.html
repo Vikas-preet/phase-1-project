@@ -64,56 +64,74 @@
         <div class="swiper-button-next"></div>
       </div>
     </div>
-
+    <br />
+    <!----------end of swiper block-------------------------------------------->
     <!---------------------------------------------------------------------------->
     <!--search dropdown section-->
-    <h3>Lets celebrate together! Please select your choice</h3>
-    <span>
-      <select name="cakes" id="cakes">
-        <option value="">Select</option>
-      </select></span
-    >
-    <!--end of search section-->
-    <!---------------------------------------------------------------------------->
+    <div class="flex-container">
+      <div class="flex-child-1">
+        <div class="display-section">
+          <br />
+          <h3>Lets celebrate together! Please select your choice</h3>
+          <br />
+          <span>
+            <select name="cakes" id="cakes">
+              <option value="">Select</option>
+            </select></span
+          >
+          <!--end of search section-->
+          <!---------------------------------------------------------------------------->
 
-    <!---------------------------------------------------------------------------->
-    <!--Display selection for cakes-->
-    <div class="display option">
-      <img
-        class="detail-image"
-        src="./images/image-placeholder.jpg"
-        alt="Insert image Here"
-      />
-      <h2 class="display-heading">cake name</h2>
+          <!---------------------------------------------------------------------------->
+          <!--Display selection for cakes-->
+
+          <div class="display option">
+            <img
+              class="detail-image"
+              src="./images/image-placeholder.jpg"
+              alt="Insert image Here"
+            />
+            <h2 class="display-heading">cake name</h2>
+          </div>
+
+          <h3>Rating:</h3>
+          <p><span id="display-rating">Display rating here</span> /10</p>
+
+          <h3>Comment:</h3>
+          <p id="display-comment">Show comment here</p>
+        </div>
+      </div>
+      <!---------------------------------------------------------------------------->
+
+      <!---------------------------------------------------------------------------->
+      <!--Get customer's suggestion-->
+      <br />
+
+      <div class="flex-child-2">
+        <div class="feedback-section">
+          <br />
+          <h3>Your Feedback</h3>
+          <br />
+          <p>
+            Please give your suggetion for new cake options that you want us to
+            add in our menu. We will love to hear from you!
+          </p>
+          <br />
+          <form id="new-cake-choice">
+            <h4>Add New cake</h4>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="new-name" /><br />
+            <label for="image">Image: </label>
+            <input type="text" name="image" id="new-image" /><br />
+            <label for="rating">Rating: </label>
+            <input type="number" name="rating" id="new-rating" /><br />
+            <label for="new-comment">Comment: </label>
+            <textarea name="new-comment" id="new-comment"></textarea>
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
     </div>
-
-    <h3>Rating:</h3>
-    <p><span id="display-rating">Display rating here</span> /10</p>
-
-    <h3>Comment:</h3>
-    <p id="display-comment">Show comment here</p>
-    <!---------------------------------------------------------------------------->
-
-    <!---------------------------------------------------------------------------->
-    <!--Get customer's suggestion-->
-    <br />
-    <h3>Your Feedback</h3>
-    <p>
-      Please give your suggetion for new cake options that you want us to add in
-      our menu. We will love to hear from you!
-    </p>
-    <form id="new-cake-choice">
-      <h4>Add New cake</h4>
-      <label for="name">Name: </label>
-      <input type="text" name="name" id="new-name" />
-      <label for="image">Image: </label>
-      <input type="text" name="image" id="new-image" />
-      <label for="rating">Rating: </label>
-      <input type="number" name="rating" id="new-rating" />
-      <label for="new-comment">Comment: </label>
-      <textarea name="new-comment" id="new-comment"></textarea>
-      <input type="submit" value="submit" />
-    </form>
     <!---------------------------------------------------------------------------->
 
     <!--footer section-->
