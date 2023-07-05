@@ -2,10 +2,6 @@
 
 const cakesSelect = document.querySelector("#cakes")
 const cardDiv = document.createElement("div")
-const image = document.querySelector(".detail-image")
-const title = document.querySelector(".display-heading")
-const rating = document.getElementById("display-rating")
-const comment = document.getElementById("display-comment")
 
 //Event listeners
 // First event listener to select the option from drop down for cake choice
@@ -42,7 +38,7 @@ function renderCakeOptions(cakes) {
 //fetchCake function is to fetch the selected option from server
 function fetchCake(e) {
   const cakeInput = e.target.value
-  console.log(cakeInput)
+
   fetch(`http://localhost:3000/cakes/${cakeInput}`)
     .then((res) => res.json())
     .then((data) => {
@@ -54,7 +50,12 @@ function fetchCake(e) {
 
 function displayCake(data) {
   //replacechildren funtion will clear the previous options
-  //cakesContainer.replaceChildren()
+  cakesContainer.replaceChildren()
+
+  const image = document.querySelector(".detail-image")
+  const title = document.querySelector(".display-heading")
+  const rating = document.getElementById("display-rating")
+  const comment = document.getElementById("display-comment")
 
   title.textContent = data.name
   image.src = data.image
@@ -79,6 +80,7 @@ newCakeOption.addEventListener("submit", (event) => {
     comment: newComment,
   }
   postCakeData(newCake)
+  event.target.reset()
 })
 
 //post request function to add new cake
@@ -90,8 +92,8 @@ const postCakeData = (newCake) => {
     },
     body: JSON.stringify(newCake),
   }
-  // return fetch("http://localhost:3000/cakes", config).then((data) =>
-  //   data.json()
-  // )
-  alert("Thanks for your valuable suggestion.")
+  return fetch("http://localhost:3000/cakes", config).then((data) => {
+    alert("Thanks for your valuable suggestion.")
+    return data.json()
+  })
 }
